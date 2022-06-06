@@ -98,15 +98,19 @@ function showQuestion(gameType) {
 function checkAnswer(option) {
     if (option === question.answer) {
         alert("You got it right! Select a new category to continue playing.");
+        incrementScore();
     } else {
-        alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`)
+        alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
+        incrementWrongAnswer();
     }
 }
 
 function incrementScore() {
-
+    let score = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++score;
 }
 
 function incrementWrongAnswer() {
-
+    let incorrect = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++incorrect;
 }
