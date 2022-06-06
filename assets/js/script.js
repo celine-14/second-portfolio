@@ -93,15 +93,19 @@ function showQuestion(gameType) {
     document.getElementById("b").textContent = question.b;
     document.getElementById("c").textContent = question.c;
     document.getElementById("d").textContent = question.d;
+
 }
 
 function checkAnswer(option) {
     if (option === question.answer) {
         alert("You got it right! Select a new category to continue playing.");
         incrementScore();
+        removeAttemptedQuestion();
+        
     } else {
         alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
         incrementWrongAnswer();
+        removeAttemptedQuestion();
     }
 }
 
@@ -114,3 +118,18 @@ function incrementWrongAnswer() {
     let incorrect = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++incorrect;
 }
+
+function removeAttemptedQuestion() {
+    let gameType = button.getAttribute("data-type")
+    if (attempt === gameType) {
+        alert("You have already picked this category!")
+        delete questions[attempt];
+    }
+}
+    
+
+ 
+//delete questions.medieval
+console.log(questions)
+
+
