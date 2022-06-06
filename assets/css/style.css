@@ -13,3 +13,12 @@ body {
     text-align: center;
     background: #f1c1bd;
 }
+
+/* headings */
+
+h1 {
+    font-family: 'Oxygen', sans-serif;
+    padding: 40px 30px;
+    text-transform: uppercase;
+    color: #182c2b;
+}
