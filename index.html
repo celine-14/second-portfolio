@@ -9,7 +9,29 @@
     <title>Classical Music Quiz</title>
 </head>
 <body>
+    <h1>Classical Music Quiz</h1>
 
+    <div id="game-area">
+        <div id="period-area">
+            <button data-type="medieval" class="btn-q">Medieval Period</button>
+            <button data-type="renaissance" class="btn-q">Renaissance Period</button>
+            <button data-type="baroque" class="btn-q">Baroque Period</button>
+            <button data-type="classical" class="btn-q">Classical Period</button>
+            <button data-type="romantic" class="btn-q">Romantic Period</button>
+            <button data-type="twentieth" class="btn-q">Twentieth Century</button>
+        </div>
+        <div id="question-area">Choose a time period to start</div>
+        <div id="answer-area">
+            <button data-type="submit" id="a" class="btn-a">Option 1</button>
+            <button data-type="submit" id="b" class="btn-a">Option 2</button>
+            <button data-type="submit" id="c" class="btn-a">Option 3</button>
+            <button data-type="submit" id="d" class="btn-a">Option 4</button>
+        </div>
+    </div>
+    <div class="score-area">
+        <p class="scores">Correct Answers <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+    </div>
     
     <script src="assets/js/script.js"></script>
 </body>
