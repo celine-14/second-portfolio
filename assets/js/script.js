@@ -82,18 +82,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function showQuestion {
+let question;
+
+function showQuestion(gameType) {
+
+    question = questions[gameType][0];
+
+    document.getElementById("question-area").textContent = question.text;
+    document.getElementById("a").textContent = question.a;
+    document.getElementById("b").textContent = question.b;
+    document.getElementById("c").textContent = question.c;
+    document.getElementById("d").textContent = question.d;
+}
+
+function checkAnswer(option) {
+    if (option === question.answer) {
+        alert("You got it right! Select a new category to continue playing.");
+    } else {
+        alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`)
+    }
+}
+
+function incrementScore() {
 
 }
 
-function checkAnswer {
+function incrementWrongAnswer() {
 
-}
-
-function incrementScore {
-
-}
-
-function incrementWrongAnswer {
-    
 }
