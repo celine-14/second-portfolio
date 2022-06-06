@@ -81,3 +81,19 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 });
+
+function showQuestion {
+
+}
+
+function checkAnswer {
+
+}
+
+function incrementScore {
+
+}
+
+function incrementWrongAnswer {
+    
+}
