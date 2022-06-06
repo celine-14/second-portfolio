@@ -22,3 +22,99 @@ h1 {
     text-transform: uppercase;
     color: #182c2b;
 }
+
+/* game area */
+
+#game-area {
+    background: #182c2b;
+    box-shadow: 5px 5px #ca6d68;
+    border-radius: 10px;
+
+    text-align: center;
+
+    width: 65%;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+#period-area {
+    margin: auto;
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+}
+
+.btn-q {
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+    color: #dfdade;
+
+    background: #2f4b4c;
+    border-radius: 10px;
+
+    height: 60px;
+    width: 250px;
+    margin: 10px;
+    
+    flex-grow: 1;
+}
+
+.btn-q:hover {
+    box-shadow: 5px 5px #ca6d68;
+}
+
+.btn-q:active {
+    background: #ca6d68;
+    box-shadow: none;
+}
+
+#question-area {
+    font-family: 'Noto Serif', serif;
+    font-size: 25px;
+    color: #dfdade;
+
+    padding: 40px 20px;
+}
+
+#answer-area {
+    height: 150px;
+    column-count: 2;
+    column-gap: 10px;
+    padding-top: 10px;
+}
+
+.btn-a {
+    border: 2px solid #2f4b4c;
+    border-radius: 10px;
+    
+    height: 45px;
+    width: 80%;
+    margin: 10px;
+}
+
+.btn-a:hover {
+    border: 6px solid #ca6d68;
+}
+
+.btn-a:active {
+    background: #ca6d68;
+}
+
+.score-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.scores {
+    text-align: center;
+    background: #ca6d68;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    line-height: 50px;
+    margin: 25px;
+}
