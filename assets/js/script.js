@@ -66,32 +66,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 let gameType = this.getAttribute("data-type");
                 showQuestion(gameType);
                 delete questions[gameType]; //delete attempeted questions
+                if (gameType = this.getAttribute("id")) {
+                    this.style.display = "none"
+                }
             }
         })
     }
 });
 
+
 let question;
 
 function showQuestion(gameType) {
 
-    if (question = questions[gameType][0]) {
-        document.getElementById("question-area").textContent = question.text;
-        document.getElementById("a").textContent = question.a;
-        document.getElementById("b").textContent = question.b;
-        document.getElementById("c").textContent = question.c;
-        document.getElementById("d").textContent = question.d;
-    } 
-    else if (gameType != questions[gameType]) {
-        alert("You have selected this category. Pick another!")
-    }
+    question = questions[gameType][0]
+
+    document.getElementById("question-area").textContent = question.text;
+    document.getElementById("a").textContent = question.a;
+    document.getElementById("b").textContent = question.b;
+    document.getElementById("c").textContent = question.c;
+    document.getElementById("d").textContent = question.d;
+
 }
 
 function checkAnswer(option) {
     if (option === question.answer) {
         alert("You got it right! Select a new category to continue playing.");
         incrementScore();
-
     } else {
         alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
         incrementWrongAnswer();
@@ -108,4 +109,8 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerText = ++incorrect;
 }
 
-console.log(questions)
+function removeButton(gameType) {
+
+    gameType = document.getElementById("gameType")
+    gameType.style.display = "none"
+}
