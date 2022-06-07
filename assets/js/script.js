@@ -60,14 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
+
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer(this.getAttribute("id"));
             } else {
                 let gameType = this.getAttribute("data-type");
                 showQuestion(gameType);
-                delete questions[gameType]; //delete attempeted questions
-                if (gameType = this.getAttribute("id")) {
-                    this.style.display = "none"
+                delete questions[gameType]; //delete attempted questions
+
+                // selected category colours
+                if (gameType = button.getAttribute("id")) {
+                    this.style.background = "grey"
                 }
             }
         })
@@ -89,13 +92,25 @@ function showQuestion(gameType) {
 
 }
 
+function newQuestion() {
+    
+    document.getElementById("question-area").textContent = "Choose a time period to start";
+    document.getElementById("a").style.display = "none";
+    document.getElementById("b").style.display = "none";
+    document.getElementById("c").style.display = "none";
+    document.getElementById("d").style.display = "none";
+
+}
+
 function checkAnswer(option) {
     if (option === question.answer) {
         alert("You got it right! Select a new category to continue playing.");
         incrementScore();
+        newQuestion();
     } else {
         alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
         incrementWrongAnswer();
+        newQuestion();
     }
 }
 
@@ -108,3 +123,4 @@ function incrementWrongAnswer() {
     let incorrect = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++incorrect;
 }
+
