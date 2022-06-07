@@ -108,9 +108,3 @@ function incrementWrongAnswer() {
     let incorrect = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++incorrect;
 }
-
-function removeButton(gameType) {
-
-    gameType = document.getElementById("gameType")
-    gameType.style.display = "none"
-}
