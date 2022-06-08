@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.style.display = "none"; // remove category
             }
 
-        })
+        });
     }
 });
 
@@ -88,13 +88,13 @@ function showQuestion(gameType) {
     question = questions[gameType][0];
 
     // Show button options and category display
-    document.getElementById("category-display").style.display = "unset"
+    document.getElementById("category-display").style.display = "unset";
     document.getElementById("a").style.display = "unset";
     document.getElementById("b").style.display = "unset";
     document.getElementById("c").style.display = "unset";
     document.getElementById("d").style.display = "unset";
 
-    document.getElementById("category-display").textContent = gameType
+    document.getElementById("category-display").textContent = gameType;
     document.getElementById("question-area").textContent = question.text;
     document.getElementById("a").textContent = question.a;
     document.getElementById("b").textContent = question.b;
@@ -107,7 +107,7 @@ function showQuestion(gameType) {
 function newQuestion() {
 
     // Show original text and hide button options and category display
-    document.getElementById("category-display").style.display = "none"
+    document.getElementById("category-display").style.display = "none";
     document.getElementById("question-area").textContent = "Choose a time period to start";
     document.getElementById("a").style.display = "none";
     document.getElementById("b").style.display = "none";
@@ -177,6 +177,6 @@ function gameOver() {
 }
 
 function restartGame() {
-    window.location.reload()
+    window.location.reload();
 }
 
