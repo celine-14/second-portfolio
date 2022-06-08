@@ -11,19 +11,19 @@ const questions = {
     }],
     renaissance: [{
         text: "A type of liturgical music of the Roman Catholic Church used to accompany the text of the mass and the canonical hours, or divine office.",
+        answer: "d",
         a: "Sea Shanties",
         b: "Oratorio",
         c: "Freestyle",
-        d: "Gregorian Chant",
-        answer: "d"
+        d: "Gregorian Chant"
     }],
     baroque: [{
         text: "Which Baroque musician was the first conductor to die from a baton?",
+        answer: "c",
         a: "George Frideric Handel",
         b: "Johann Sebastian Bach",
         c: "Jean-Baptiste Lully",
-        d: "Walter White",
-        answer: "c",
+        d: "Walter White"
     }],
     classical: [{
         text: "A musical term for when all the voices or instruments perform together.",
@@ -35,11 +35,11 @@ const questions = {
     }, ],
     romantic: [{
         text: 'Which 19th-century composer and violinist was known as "The Devil\'s Violinist"?',
+        answer: "b",
         a: "Vivaldi",
         b: "Paganini",
         c: "Fettuccine",
-        d: "Salieri",
-        answer: "b"
+        d: "Salieri"
     }],
     twentieth: [{
         text: "Known for his orchestral compositions and his musicals, which composer died of a brain tumor at the age of 38?",
@@ -63,20 +63,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer(this.getAttribute("id"));
+
             } else {
                 let gameType = this.getAttribute("data-type");
                 showQuestion(gameType);
-                delete questions[gameType]; //delete attempted questions
 
-                // selected category colours
-                if (gameType = button.getAttribute("id")) {
-                    this.style.background = "grey"
-                }
+                delete questions[gameType]; // remove question from object data
+                this.style.background = "grey" // change button color
+                this.style.display = "none" // remove category
+                //document.getElementById("period-area").removeAttribute("disabled")
+
             }
         })
     }
 });
-
 
 let question;
 
@@ -99,7 +99,7 @@ function showQuestion(gameType) {
 }
 
 function newQuestion() {
-    
+
     // Show original text and hide button options 
     document.getElementById("question-area").textContent = "Choose a time period to start";
     document.getElementById("a").style.display = "none";
@@ -110,15 +110,22 @@ function newQuestion() {
 }
 
 function checkAnswer(option) {
+
+    // let myCategories = document.getElementsByClassName("btn-q");
+    // let selectedCategory = myCategories.getAttribute("data-type"); //medieval
+
     if (option === question.answer) {
         alert("You got it right! Select a new category to continue playing.");
         incrementScore();
         newQuestion();
+
     } else {
         alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
         incrementWrongAnswer();
         newQuestion();
+
     }
+
 }
 
 function incrementScore() {
@@ -130,4 +137,3 @@ function incrementWrongAnswer() {
     let incorrect = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++incorrect;
 }
-
