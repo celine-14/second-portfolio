@@ -52,6 +52,7 @@ const questions = {
 
 };
 
+
 // Wait for the DOM to finish downloading before running the game
 // Get the button elements and add event listeners to them
 
@@ -64,14 +65,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer(this.getAttribute("id"));
 
-            } else {
+            } else if (this.getAttribute("data-type") === "restartButton") {
+                restartGame();
+            }
+            else {
                 let gameType = this.getAttribute("data-type");
                 showQuestion(gameType);
 
                 delete questions[gameType]; // remove question from object data
-                this.style.background = "grey" // change button color
-                this.style.display = "none" // remove category
+                this.style.background = "grey"; // change button color
+                this.style.display = "none"; // remove category
             }
+
         })
     }
 });
@@ -80,7 +85,7 @@ let question;
 
 function showQuestion(gameType) {
 
-    question = questions[gameType][0]
+    question = questions[gameType][0];
 
     // Show button options
     document.getElementById("a").style.display = "unset";
@@ -94,7 +99,7 @@ function showQuestion(gameType) {
     document.getElementById("c").textContent = question.c;
     document.getElementById("d").textContent = question.d;
 
-    disableButtons()
+    disableButtons();
 }
 
 function newQuestion() {
@@ -113,10 +118,10 @@ function newQuestion() {
  * User has to pick an option before continuing the game
  */
 function disableButtons() {
-    
+
     let disableAreas = document.getElementById("period-area").getElementsByTagName("button");
     for (let disableArea of disableAreas) {
-        disableArea.disabled = true
+        disableArea.disabled = true;
     }
 }
 
@@ -126,23 +131,25 @@ function disableButtons() {
 function enableButtons() {
     let disableAreas = document.getElementById("period-area").getElementsByTagName("button");
     for (let disableArea of disableAreas) {
-        disableArea.disabled = false
+        disableArea.disabled = false;
     }
 }
 
 function checkAnswer(option) {
 
     if (option === question.answer) {
-        alert("You got it right! Select a new category to continue playing.");
+        alert("You got it right!");
         incrementScore();
         newQuestion();
         enableButtons();
+        gameOver();
 
     } else {
-        alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
+        alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}.`);
         incrementWrongAnswer();
         newQuestion();
         enableButtons();
+        gameOver();
     }
 }
 
@@ -155,3 +162,18 @@ function incrementWrongAnswer() {
     let incorrect = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++incorrect;
 }
+
+function gameOver() {
+    let correctAnswers = parseInt(document.getElementById("score").innerText);
+    let incorrectAnswers = parseInt(document.getElementById("incorrect").innerText);
+
+    if (correctAnswers + incorrectAnswers === 6) {
+        document.getElementById("question-area").textContent = `You got ${correctAnswers} out of 6 answers correct!`;
+        document.getElementById("restart").style.display = "unset";
+    }
+}
+
+function restartGame() {
+    window.location.reload()
+}
+

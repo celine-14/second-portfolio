@@ -79,6 +79,31 @@ h1 {
     padding: 40px 20px;
 }
 
+#restart {
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+    color: #dfdade;
+
+    background: #2f4b4c;
+    border-radius: 10px;
+
+    height: 60px;
+    width: 250px;
+    margin: 10px;
+
+    display: none;
+}
+
+
+#restart:hover {
+    box-shadow: 5px 5px #ca6d68;
+}
+
+#restart:active {
+    background: #ca6d68;
+    box-shadow: none;
+}
+
 #answer-area {
     height: 150px;
     column-count: 2;
