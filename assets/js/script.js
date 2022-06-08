@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer(this.getAttribute("id"));
 
-            } else if (this.getAttribute("data-type") === "restartButton") {
+            } else if (this.getAttribute("data-type") === "restart-button") {
                 restartGame();
             }
             else {
