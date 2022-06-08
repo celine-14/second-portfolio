@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 delete questions[gameType]; // remove question from object data
                 this.style.background = "grey" // change button color
                 this.style.display = "none" // remove category
-                //document.getElementById("period-area").removeAttribute("disabled")
-
             }
         })
     }
@@ -96,6 +94,7 @@ function showQuestion(gameType) {
     document.getElementById("c").textContent = question.c;
     document.getElementById("d").textContent = question.d;
 
+    disableButtons()
 }
 
 function newQuestion() {
@@ -109,23 +108,42 @@ function newQuestion() {
 
 }
 
-function checkAnswer(option) {
+/**
+ * Disables category buttons after a category has been chosen.
+ * User has to pick an option before continuing the game
+ */
+function disableButtons() {
+    
+    let disableAreas = document.getElementById("period-area").getElementsByTagName("button");
+    for (let disableArea of disableAreas) {
+        disableArea.disabled = true
+    }
+}
 
-    // let myCategories = document.getElementsByClassName("btn-q");
-    // let selectedCategory = myCategories.getAttribute("data-type"); //medieval
+/**
+ * Enables category buttons after user has answered the question of a chosen category
+ */
+function enableButtons() {
+    let disableAreas = document.getElementById("period-area").getElementsByTagName("button");
+    for (let disableArea of disableAreas) {
+        disableArea.disabled = false
+    }
+}
+
+function checkAnswer(option) {
 
     if (option === question.answer) {
         alert("You got it right! Select a new category to continue playing.");
         incrementScore();
         newQuestion();
+        enableButtons();
 
     } else {
         alert(`Awww... you answered ${question[option]}. The correct answer was ${question[question.answer]}. Select a new category to continue playing!`);
         incrementWrongAnswer();
         newQuestion();
-
+        enableButtons();
     }
-
 }
 
 function incrementScore() {
