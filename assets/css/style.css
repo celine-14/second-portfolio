@@ -151,7 +151,44 @@ h1 {
     background: #ca6d68;
     border-radius: 10px;
     height: 50px;
-    width: 300px;
+    width: 250px;
     line-height: 50px;
     margin: 25px;
+}
+
+/* media queries */
+
+/* for medium screen size from 990px wide and down */
+
+@media screen and (max-width: 990px) {
+
+
+    h1 {
+        padding: 25px 30px;
+    }
+    #game-area {
+        width: 80%;
+    }
+
+    .btn-q {
+        font-size: 13px;
+        width: 200px;
+    }
+
+    #category-display {
+        font-size: 20px;
+    }
+
+    #question-area {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .btn-a {
+        font-size: 12px;
+    }
+
+    .scores {
+        font-size: 12px;
+    }
 }
