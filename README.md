@@ -36,10 +36,8 @@
 
 - __Leaderboard__
 
-    
 
 - __Progress Bar__
-    
      
 
 ## Testing
@@ -102,5 +100,3 @@ The live link can be found here - https://celine-14.github.io/second-portfolio/
 ### Content
 
 - The fonts were imported from [Google Fonts](https://fonts.google.com/).
-
-### Media
