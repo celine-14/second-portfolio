@@ -25,7 +25,8 @@
 ## Features
 ### Existing features
 
-- __Header__
+- __Heading__
+    - The name of the game is featured at the top for user to see.
 
 - __Game Options__
 
