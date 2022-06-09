@@ -15,7 +15,7 @@
 # Classical Music Quiz
 
 ## Introduction
-
+This quiz is for all the classical music students, nerds and enthusiasts to test their knowledge in music history and terminology. The quiz consists of 6 questions from each musical era from the Medieval period to the Twentieth Century.
 
 ![Responsive Mockup](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_mockup.png?raw=true)
 
