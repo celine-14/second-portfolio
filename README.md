@@ -50,15 +50,22 @@
     ![Answers](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_answer_options.png?raw=true)
 
 - __Game Results__
+  - This section displays the number of correct and incorrect results from the user.
+  ![Scores](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_scores.png?raw=true)
+
+- __Game Over__ 
+  - A summary of your scores and a refresh button will appear after user has succesfully answered all questions.
+  - User can click the refresh button if they wish to play again.
+  ![Refresh](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_game_over.png?raw=true)
 
 
 ### Features left to implement 
 
 - __Leaderboard__
+  - A leaderboard section for players to compare and compete against each other.
 
-
-- __Progress Bar__
-     
+- __Timer__
+  - A timer to limit the answering time to make the game more challenging for the user.
 
 ## Testing
 
@@ -86,6 +93,11 @@
 
 - JavaScript
   - No errors were returd when passing through the official [JSHint JavaScript Validator](https://jshint.com/)
+  - The following metrics were returned:
+    - There are 11 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 0.
+    - Largest function has 13 statements in it, while the median is 3.
+    - The most complex function has a cyclomatic complexity value of 3 while the median is 2.
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html).
 - CSS
@@ -117,3 +129,5 @@ The live link can be found here - https://celine-14.github.io/second-portfolio/
 ### Content
 
 - The fonts were imported from [Google Fonts](https://fonts.google.com/).
+
+- Favicon is generated from [Favicon](https://favicon.io/). 
