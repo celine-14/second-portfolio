@@ -46,13 +46,14 @@
 
 ### Website Functionality Testing
 
+- All buttons are functioning and trigger the correct function
 
 ### UI Testing
 
 - Evaluated designs including layout, colours, fonts, font sizes, text formatting, buttons, lists, icons and links.
 - Tested with different screen resolutions and devices using Chrome DevTools.
-- Tested colour contrast across all pages using [Color Contrast Analyzer](https://color.adobe.com/create/color-contrast-analyzer) by Adobe and made sure the colour contrast is high enough.
-
+- Game is played and results are always accurate.
+- Tested colour contrast using [Color Contrast Analyzer](https://color.adobe.com/create/color-contrast-analyzer) by Adobe and made sure the colour contrast is high enough and easy to read.
 
 ### Compatibility Testing
 
