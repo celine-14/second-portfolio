@@ -42,7 +42,7 @@
 
   - Answer Area
     - Four options will be displayed and user is required to choose an option.
-    - The user will submit their answers upon clicking on the buttons.
+    - The user will submit their answers by clicking on the buttons.
     - A pop up will appear to inform the user if their selected option is correct or incorrect.
     ![Answers](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_answer_options.png?raw=true)
 
@@ -68,11 +68,11 @@
 
 ### Website Functionality Testing
 
-- All buttons are functioning and trigger the correct function
+- All buttons are functioning and triggering the correct function
 
 ### UI Testing
 
-- Evaluated designs including layout, colours, fonts, font sizes, text formatting, buttons, lists, icons and links.
+- Evaluated designs including layout, colours, fonts, font sizes, text formatting and buttons.
 - Tested with different screen resolutions and devices using Chrome DevTools.
 - Game is played and results are always accurate.
 - Tested colour contrast using [Color Contrast Analyzer](https://color.adobe.com/create/color-contrast-analyzer) by Adobe and made sure the colour contrast is high enough and easy to read.
@@ -89,7 +89,7 @@
 ### Validator Testing
 
 - JavaScript
-  - No errors were returd when passing through the official [JSHint JavaScript Validator](https://jshint.com/)
+  - No errors were returned when passing through the official [JSHint JavaScript Validator](https://jshint.com/)
   - The following metrics were returned:
     - There are 11 functions in this file.
     - Function with the largest signature take 1 arguments, while the median is 0.
@@ -107,7 +107,8 @@
   ![Desktop Version](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/lighthouse_testing_desktop.png?raw=true)
 
 - Mobile Version
-  - Mobile version is tested and achieved full mark of 100 for Accessibilty, Best Practices ans SEO. Performance score is 99.
+  - Mobile version is tested and achieved full mark of 100 for Accessibilty, Best Practices ans SEO. 
+  - Performance score is 99.
   ![Mobile Version](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/lighthouse_testing_mobile.png?raw=true)
 
 
