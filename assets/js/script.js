@@ -166,6 +166,10 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerText = ++incorrect;
 }
 
+/**
+ * Retrieve and calculate the total number answered by user from DOM.
+ * Display the refresh button once all questions been answered.
+ */
 function gameOver() {
     let correctAnswers = parseInt(document.getElementById("score").innerText);
     let incorrectAnswers = parseInt(document.getElementById("incorrect").innerText);
@@ -176,6 +180,9 @@ function gameOver() {
     }
 }
 
+/**
+ * Restart game after all questions has been answered
+ */
 function restartGame() {
     window.location.reload();
 }
