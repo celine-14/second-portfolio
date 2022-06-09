@@ -26,9 +26,28 @@
 ### Existing features
 
 - __Heading__
-    - The name of the game is featured at the top for user to see.
+  - The name of the game "Classical Music Quiz" is featured at the top for user to see.
+  ![Heading](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_heading.png?raw=true)
 
-- __Game Options__
+- __Game Area__
+  - Category Area
+    - The user will be able to select the type of question to answer by selecting a category displayed.
+    ![Categories](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_category.png?raw=true)
+    - After a question has been selected by the user, the category will be removed from the category area. 
+    - The user will not be able to select another category until the selected question has been answered.
+    ![Removed Category](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_category_after.png?raw=true)
+
+  - Question Area
+    - The selected category and question will be displayed in this section and user will be able to read the question before choosing the correct answer.
+    - This area will be refreshed after every question has been answered.
+    ![Question Before](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_question_before.png?raw=true)
+    ![Question After](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_question.png?raw=true)
+
+  - Answer Area
+    - Four options will be displayed and user is required to choose an option.
+    - The user will submit their answers upon clicking on the buttons.
+    - A pop up will appear to inform the user if their selected option is correct or incorrect.
+    ![Answers](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/quiz_answer_options.png?raw=true)
 
 - __Game Results__
 
@@ -57,13 +76,11 @@
 ### Compatibility Testing
 
 - Firefox
-    - Website functions as normal.
-
+  - Website functions as normal.
 - Chrome
-    - Website functions as normal.
-
+  - Website functions as normal.
 - Microsoft Edge
-    - Website fucntions as normal.
+  - Website fucntions as normal.
 
 ### Validator Testing
 
@@ -77,13 +94,12 @@
 ### Lighthouse Testing
 
 - Desktop Version
-    - Desktop version is tested and achieved full mark of 100 for Performance, Accessibility, Best Practices and SEO.  
-    ![Desktop Version](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/lighthouse_testing_desktop.png?raw=true)
+  - Desktop version is tested and achieved full mark of 100 for Performance, Accessibility, Best Practices and SEO.  
+  ![Desktop Version](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/lighthouse_testing_desktop.png?raw=true)
 
 - Mobile Version
-    - Mobile version is tested and achieved full mark of 100 for Accessibilty, Best Practices ans SEO.
-    - Performance score is 99.
-    ![Mobile Version](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/lighthouse_testing_mobile.png?raw=true)
+  - Mobile version is tested and achieved full mark of 100 for Accessibilty, Best Practices ans SEO. Performance score is 99.
+  ![Mobile Version](https://github.com/celine-14/second-portfolio/blob/main/docs/screenshots/lighthouse_testing_mobile.png?raw=true)
 
 
 ## Deployment
