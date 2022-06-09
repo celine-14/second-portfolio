@@ -11,9 +11,6 @@
     * [Lighthouse Testing](#lighthouse-testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
-    * [Content](#content)
-    * [Media](#media)
-    * [Font](#font)
 
 # Classical Music Quiz
 
@@ -125,8 +122,6 @@
 The live link can be found here - https://celine-14.github.io/second-portfolio/
 
 ## Credits
-
-### Content
 
 - The fonts were imported from [Google Fonts](https://fonts.google.com/).
 
